@@ -1,0 +1,37 @@
+@import "base/fonts";
+@import "base/mixins";
+@import "base/variables";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+ 	font-family: 'Mulish', sans-serif;
+}
+
+.container {
+	max-width: 1110px;
+	margin: 0 auto;
+	@media (max-width: 1130px) {
+		max-width: 970px;
+	}
+	@media (max-width: 991.98px) {
+		max-width: 750px;
+	}
+	@media (max-width: 767.98px) {
+		max-width: none;
+		padding: 0 10px;
+	}
+
+}
+
+@import "blocks/ibg";
+@import "blocks/btn";
+@import "blocks/title";
+@import "blocks/text";
+@import "blocks/subtitle";
+@import "blocks/header";
+@import "blocks/promo";
+@import "blocks/about";
+@import "blocks/projects";
+

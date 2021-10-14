@@ -1,0 +1,9 @@
+.subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    color: $dark;
+    &_gray {
+        color: $gray;
+    }
+}
