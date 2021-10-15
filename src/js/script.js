@@ -10,14 +10,14 @@ window.addEventListener('DOMContentLoaded', () => {
 		navMenu.classList.toggle('header__nav_active');
 	});
 
-	const slides = document.querySelectorAll('.projects__slide'),
-		  sliderWindow = document.querySelector('.projects__slider-wrapper'),
-		  sliderInner = document.querySelector('.projects__slider-inner'),
-		  arrowPrev = document.querySelector('.icon-arrow-prev'),
-		  arrowNext = document.querySelector('.icon-arrow-next');
+	const projectsSlides = document.querySelectorAll('.projects__slide'),
+		  projectsSliderWindow = document.querySelector('.projects__slider-wrapper'),
+		  projectsSliderInner = document.querySelector('.projects__slider-inner'),
+		  projectsArrowPrev = document.querySelector('.projects__arrow-prev'),
+		  projectsArrowNext = document.querySelector('.projects__arrow-next');
 
 
-	function slide (sliderWindowSelector, sliderInnerSelector, slidesSelector, arrowPrevSelector, arrowNextSelector) {
+	function slideProjects (sliderWindowSelector, sliderInnerSelector, slidesSelector, arrowPrevSelector, arrowNextSelector) {
 		const sliderWindowMaxWidth = +window.getComputedStyle(sliderWindowSelector).maxWidth.slice(0, (window.getComputedStyle(sliderWindowSelector).maxWidth.length - 2));
 		const sliderWindowWidth = +window.getComputedStyle(sliderWindowSelector).width.slice(0, (window.getComputedStyle(sliderWindowSelector).width.length - 2));
 		const slideWidth = +window.getComputedStyle(slidesSelector[0]).width.slice(0, (window.getComputedStyle(slidesSelector[0]).width.length - 2));
@@ -52,7 +52,51 @@ window.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 	
-	slide(sliderWindow, sliderInner, slides, arrowPrev, arrowNext);
+	slideProjects(projectsSliderWindow, projectsSliderInner, projectsSlides, projectsArrowPrev, projectsArrowNext);
+
+//======================================================
+
+	const feedbackSlides = document.querySelectorAll('.feedback__item'),
+		  feedbackArrowPrev = document.querySelector('.feedback__arrow-prev'),
+		  feedbackArrowNext = document.querySelector('.feedback__arrow-next');
+		  
+	function slideFeedback (slidesSelector, slideActiveClass, arrowPrevSelector, arrowNextSelector) {
+		let slideIndex = 0;
+			
+		arrowNextSelector.addEventListener('click', e => {
+			e.preventDefault();
+			
+			slidesSelector.forEach(slide => {
+				slide.classList.remove(slideActiveClass);
+			});
+
+			slideIndex++;
+
+			if (slideIndex > (slidesSelector.length - 1)) {
+				slideIndex = 0;
+			}
+
+			slidesSelector[slideIndex].classList.add(slideActiveClass);
+		});
+
+		arrowPrevSelector.addEventListener('click', e => {
+			e.preventDefault();
+			
+			slidesSelector.forEach(slide => {
+				slide.classList.remove(slideActiveClass);
+			});
+
+			slideIndex--;
+
+			if (slideIndex < 0) {
+				slideIndex = slidesSelector.length - 1;
+			}
+
+			slidesSelector[slideIndex].classList.add(slideActiveClass);
+		});
+	}
+	
+	slideFeedback(feedbackSlides, 'feedback__item_active', feedbackArrowPrev, feedbackArrowNext);
 
 });
 

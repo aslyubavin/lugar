@@ -1,0 +1,113 @@
+.feedback {
+    padding: 55px 0 125px 0;
+    @media (max-width: 767.98px) {
+        padding: 0px 0 125px 0;
+    }
+
+    &__header {
+        text-align: center;
+        margin: 0 0 25px 0;
+    }
+
+    &__nav {
+        margin: 0 0 25px 0;
+        text-align: center;
+        span {
+            font-size: 36px;
+            padding: 0 6px;
+            cursor: pointer;
+        }
+    }
+
+    &__slider-wrapper {
+        width: 100%;
+    }
+
+    &__slider-inner {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__item {
+        display: none;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        @media (max-width: 767.98px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__item_active {
+        display: flex;
+    }
+
+    &__photo {
+        flex: 0 0 auto;
+        width: 445px;
+        height: 350px;
+        @media (max-width: 991.98px) {
+            width: 350px;
+            height: 275px;
+        }
+        @media (max-width: 767.98px) {
+            width: 300px;
+            height: 235px;
+        }
+    }
+
+    &__descr {
+        padding: 32px 0 0 125px;
+        @media (max-width: 991.98px) {
+            padding: 32px 0 0 20px;
+        }
+    }
+
+    &__divider {
+        display: flex;
+        margin: 0 0 18px 0;
+        span {
+            display: block;
+            margin: 0 5px;
+            width: 15px;
+            height: 27px;
+            background-color: $light-blue;
+            transform: skewX(-20deg);
+        }
+    }
+
+    &__article {
+        margin: 0 0 18px 0;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 125%;
+        color: $dark;
+    }
+
+    &__text {
+        margin: 0 0 18px 0;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 120%;
+        color: $dark;
+        @media (max-width: 991.98px) {
+            font-size: 18px;
+        }
+    }
+
+    &__author {
+        margin: 0 0 4px 0;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 120%;
+        color: $dark;
+    }
+
+    &__occupation {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 120%;
+        color: $dark;
+    }
+}
