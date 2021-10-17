@@ -82,7 +82,6 @@
         font-weight: 700;
         font-size: 32px;
         line-height: 125%;
-        color: $dark;
     }
 
     &__text {
@@ -90,7 +89,6 @@
         font-weight: 300;
         font-size: 24px;
         line-height: 120%;
-        color: $dark;
         @media (max-width: 991.98px) {
             font-size: 18px;
         }
@@ -101,13 +99,11 @@
         font-weight: 600;
         font-size: 24px;
         line-height: 120%;
-        color: $dark;
     }
 
     &__occupation {
         font-weight: 400;
         font-size: 18px;
         line-height: 120%;
-        color: $dark;
     }
 }

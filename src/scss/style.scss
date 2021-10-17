@@ -7,6 +7,7 @@
 	padding: 0;
 	box-sizing: border-box;
  	font-family: 'Mulish', sans-serif;
+	color: $dark;
 }
 
 .container {
@@ -34,4 +35,5 @@
 @import "blocks/about";
 @import "blocks/projects";
 @import "blocks/feedback";
+@import "blocks/contact";
 
