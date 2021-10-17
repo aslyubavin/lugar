@@ -10,6 +10,9 @@ window.addEventListener('DOMContentLoaded', () => {
 		navMenu.classList.toggle('header__nav_active');
 	});
 
+
+
+//======================================================
 	const projectsSlides = document.querySelectorAll('.projects__slide'),
 		  projectsSliderWindow = document.querySelector('.projects__slider-wrapper'),
 		  projectsSliderInner = document.querySelector('.projects__slider-inner'),
@@ -98,5 +101,23 @@ window.addEventListener('DOMContentLoaded', () => {
 	
 	slideFeedback(feedbackSlides, 'feedback__item_active', feedbackArrowPrev, feedbackArrowNext);
 
+//================================================================
+	const pageUp = document.querySelector('.pageup');
+	
+	window.addEventListener('scroll', () => {
+		let windowY = +window.scrollY;
+		
+		if(windowY > 800) {
+			pageUp.style.opacity = '0.7';
+		} else {
+			pageUp.style.opacity = '0';
+		}
+	});
+
+	pageUp.addEventListener('click', (e) => {
+		e.preventDefault();
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	});
+	
 });
 
