@@ -8,15 +8,15 @@
     <title>Lugar</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="home">
         <div class="container">
-            <a href="#" class="header__logo">LUGAR</a>
+            <a href="#home" class="logo">LUGAR</a>
         </div>
         <ul class="header__nav">
-            <li><a href="#" class="header__link">HOME</a></li>
-            <li><a href="#" class="header__link">ABOUT</a></li>
-            <li><a href="#" class="header__link">PROJECT</a></li>
-            <li><a href="#" class="header__link">CONTACT</a></li>
+            <li><a href="#home" class="header__link">HOME</a></li>
+            <li><a href="#about" class="header__link">ABOUT</a></li>
+            <li><a href="#projects" class="header__link">PROJECT</a></li>
+            <li><a href="#contact" class="header__link">CONTACT</a></li>
         </ul>
 		<div class="header__hamburger">
 			<span></span>
@@ -29,12 +29,12 @@
 			<h1 class="promo__title">A home is<br>built with love<br> and dreams</h1>
 			<div class="subtitle">Real estate farm that makes your dreams true</div>
 			<div class="promo__btns">
-				<button class="btn">Our projects</button>
-				<button class="btn btn_transparent">Contact us</button>
+				<a href="#projects"><button class="btn">Our projects</button></a>
+				<a href="#contact"><button class="btn btn_transparent">Contact us</button></a>
 			</div>
 		</div>
 	</section>
-	<section class="about">
+	<section class="about" id="about">
 		<div class="container">
 			<div class="about__wrapper">
 				<div class="about__photo _ibg">
@@ -61,7 +61,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="projects">
+	<section class="projects" id="projects">
 		<div class="container">
 			<div class="projects__header">
 				<div class="projects__titles">
@@ -160,7 +160,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="contact">
+	<section class="contact" id="contact">
 		<div class="container">
 			<div class="contact__wrapper">
 				<div class="contact__photo _ibg">
@@ -184,7 +184,50 @@
 			</div>
 		</div>
 	</section>
-
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__wrapper">
+				<div class="footer__contacts">
+					<a class="footer__title">lugar</a>
+					<ul class="footer__list">
+						<li class="footer__contact">
+							<span class="icon-adress"></span>
+							<a href="#">2118 Thornridge Cir.<br>Dubai, UAE 35624</a>
+						</li>
+						<li class="footer__contact">
+							<span class="icon-phone"></span>
+							<a href="tel:+3341565356-9" class="footer__phone">+33 415 65356 - 9</a>
+						</li>
+						<li class="footer__contact">
+							<span class="icon-mail"></span>
+							<a href="mailto:contact@lugar.com" class="footer__mail">contact@lugar.com</a>
+						</li>
+					</ul>
+					<p class="footer__copyright">Copyright @ 2022 Lugar Inc.</p>
+				</div>
+				<div class="footer__links">
+					<div class="footer__menu">
+						<div class="footer__title">Quick links</div>
+						<ul class="footer__list">
+							<li><a href="#home">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#projects">Project</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</div>
+					<div class="footer__media">
+						<div class="footer__title">Social media</div>
+						<ul class="footer__list">
+							<li><a href="">Facebook</a></li>
+							<li><a href="">Twitter</a></li>
+							<li><a href="">YouTube</a></li>
+							<li><a href="">LinkedIn</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
     <script src="js/script.min.js"></script>
 </body>
 </html>
