@@ -33,6 +33,7 @@
 
     &__form {
         margin: 40px 0 0 0;
+        max-width: 540px;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -75,4 +76,20 @@
         line-height: 125%;
         color: $gray;
     }
+
+    &__error {
+        display: block;
+        width: 100%;
+        margin: 0 0 5px 0;
+        font-size: 16px;
+    }
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }

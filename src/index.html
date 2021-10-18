@@ -170,11 +170,12 @@
 					<div class="title title_mb-12">Contact us</div>
 					<div class="subtitle subtitle_gray">Turpis facilisis tempor pulvinar in lobortis ornare magna.</div>
 					<form class="contact__form">
-						<input class="contact__input" name="name" type="text" placeholder="First name">
-						<input class="contact__input" name="surname" type="text" placeholder="Last name">
-						<input class="contact__input" name="email" type="text" placeholder="Email address">
-						<input class="contact__input" name="phone" type="text" placeholder="Phone number">
+						<input class="contact__input" name="name" type="text" placeholder="First name" required>
+						<input class="contact__input" name="surname" type="text" placeholder="Last name" required>
+						<input class="contact__input" name="email" type="email" placeholder="Email address" required>
+						<input class="contact__input" name="phone" type="number" placeholder="Phone number" required>
 						<textarea class="contact__area" name="descr" placeholder="Description"></textarea>
+						<p class="contact__error"></p>
 						<div class="contact__button">
 							<button class="btn">Get a quote</button>
 							<span>We don’t sell your email and spam</span>
@@ -231,6 +232,16 @@
 	<a href="" class="pageup">
 		<span class="icon-arrow-up"></span>
 	</a>
+	<div class="modal">
+        <div class="modal__dialog">
+            <div class="modal__content">
+                <form action="#">
+                    <div class="modal__close" data-close>&times;</div>
+                    <div class="modal__title">We will contact you<br>as soon as possible!</div>
+                </form>
+            </div>
+        </div>
+    </div>
     <script src="js/script.min.js"></script>
 </body>
 </html>
