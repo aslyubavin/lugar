@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Lugar</title>
+	<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    <header class="header" id="home">
+    <header class="header" id="home"> 
         <div class="container">
             <a href="#home" class="logo">LUGAR</a>
         </div>
@@ -29,8 +47,8 @@
 			<h1 class="promo__title">A home is<br>built with love<br> and dreams</h1>
 			<div class="subtitle">Real estate farm that makes your dreams true</div>
 			<div class="promo__btns">
-				<a href="#projects"><button class="btn">Our projects</button></a>
-				<a href="#contact"><button class="btn btn_transparent">Contact us</button></a>
+				<button class="btn" onclick="location.href='#projects'">Our projects</button>
+				<button class="btn btn_transparent" onclick="location.href='#contact'">Contact us</button>
 			</div>
 		</div>
 	</section>
@@ -167,7 +185,7 @@
 					<img src="img/contact_photo.jpg" alt="building">
 				</div>
 				<div class="contact__info">
-					<div class="title title_mb-12">Contact us</div>
+					<h2 class="title title_mb-12">Contact us</h2>
 					<div class="subtitle subtitle_gray">Turpis facilisis tempor pulvinar in lobortis ornare magna.</div>
 					<form class="contact__form">
 						<input class="contact__input" name="name" type="text" placeholder="First name" required>
@@ -242,6 +260,6 @@
             </div>
         </div>
     </div>
-    <script src="js/script.min.js"></script>
+    <script src="js/bundle.js"></script>
 </body>
 </html>
